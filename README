@@ -1,0 +1,13 @@
+PREPARATION:
+
+cd src/test/resourcez
+tar -xjf review-imdb.tbz2
+tar -xjf review-polarity.tbz2
+
+TRAIN:
+com.memonews.mahout.sentiment.SentimentModelTrainer src/test/resources/review-imdb/train target/model
+com.memonews.mahout.sentiment.SentimentModelTrainer src/test/resources/review-polarity/train target/model
+
+TEST:
+com.memonews.mahout.sentiment.SentimentModelTester --input src/test/resources/review-imdb/test/ --model target/model
+com.memonews.mahout.sentiment.SentimentModelTester --input src/test/resources/review-polarity/test/ --model target/model

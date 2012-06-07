@@ -16,6 +16,16 @@ Train:
 com.memonews.mahout.sentiment.SentimentModelTrainer src/test/resources/review-imdb/train target/model
 com.memonews.mahout.sentiment.SentimentModelTrainer src/test/resources/review-polarity/train target/model
 
+Output (imdb example):
+
+    25000 training files
+    0.00  0.00	0.00	0.00	0.0000000	0.0000000	1	0.000	0.00	none
+    0.00	0.00	0.00	0.00	0.0000000	0.0000000	2	0.000	0.00	none
+    0.00	0.00	0.00	0.00	0.0000000	0.0000000	3	0.000	0.00	none
+    0.00	0.00	0.00	0.00	0.0000000	0.0000000	4	0.000	0.00	none
+    0.00	0.00	0.00	0.00	0.0000000	0.0000000	6	0.000	0.00	none
+    ...
+
 Test:
 com.memonews.mahout.sentiment.SentimentModelTester --input src/test/resources/review-imdb/test/ --model target/model
 com.memonews.mahout.sentiment.SentimentModelTester --input src/test/resources/review-polarity/test/ --model target/model
